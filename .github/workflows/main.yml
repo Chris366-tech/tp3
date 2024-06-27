@@ -1,7 +1,26 @@
-- name: Google Chat Notification
-  uses: Co-qn/google-chat-notification@releases/v1
-    with:
-      name: Build
-      url: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
-      status: ${{ job.status }}
+name: Simple CI
 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: 
+      name: ENG
+
+    steps:
+      - name: Checkout repository
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const script = require('./path/to/script.js')
+            console.log(script({github, context}))
+            console.log(script({github, context}))
+    
+      - name: Run a one-line script
+        run: |
+          echo "Bonjour"
