@@ -1,5 +1,5 @@
-- name: Send mail
-  uses: dawidd6/action-send-mail@v3
+- name: Send email
+  uses: dawidd6/action-send-mail@v3.12.0
     with:
       # Optional (recommended) mail server username:
       username: christophe.bonin@outlook.com
