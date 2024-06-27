@@ -1,9 +1,9 @@
 - name: Send mail
-    uses: dawidd6/action-send-mail@v3
-    with:
-      # Optional (recommended) mail server username:
-      username: christophe.bonin@outlook.com
-      # Required mail subject:
-      subject: This is a new Topic
-      # Optional plain body:
-      body: Test de body
+  uses: dawidd6/action-send-mail@v3
+  with:
+    # Optional (recommended) mail server username:
+    username: christophe.bonin@outlook.com
+    # Required mail subject:
+    subject: This is a new Topic
+    # Optional plain body:
+    body: Test de body
